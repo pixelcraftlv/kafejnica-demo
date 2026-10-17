@@ -309,6 +309,68 @@ section {
   }
 }
 
+/* ROAST — uzlabota sākumlapas sadaļa */
+.hero {
+  min-height: 600px;
+  padding: 100px 8%;
+  background-position: center 55%;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero .eyebrow {
+  font-size: 13px;
+  letter-spacing: 4px;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 7vw, 82px);
+  line-height: 1.04;
+  letter-spacing: -2px;
+  margin-bottom: 18px;
+}
+
+.hero p:not(.eyebrow) {
+  max-width: 510px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #f4e9dc;
+}
+
+.hero .button {
+  padding: 15px 25px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.hero .button.outline {
+  border-color: rgba(255, 248, 237, 0.7);
+}
+
+.hero .button.outline:hover {
+  background: #fff8ed;
+  color: #30241d;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 530px;
+    padding: 75px 7%;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px, 12vw, 60px);
+  }
+
+  .hero p:not(.eyebrow) {
+    font-size: 16px;
+  }
+}
+
   </style>
 </head>
 <body>
