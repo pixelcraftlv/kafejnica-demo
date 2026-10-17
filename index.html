@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ROAST Kafejnīca — kafija, svaigi cepti kruasāni un mājīga atmosfēra.">
+  <title>ROAST | Kafejnīca</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f4ed;
+      color: #30241d;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    header {
+      background: #211812;
+      color: #fff8ed;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 29px;
+      letter-spacing: 4px;
+    }
+    .logo span {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      text-align: center;
+      letter-spacing: 5px;
+    }
+    nav { display: flex; gap: 22px; flex-wrap: wrap; }
+    nav a { font-size: 14px; }
+    nav a:hover { color: #d5a16d; }
+    .hero {
+      min-height: 490px;
+      padding: 90px 8%;
+      color: white;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(20,13,9,.9), rgba(20,13,9,.25)),
+        url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=85") center/cover;
+    }
+    .hero-content { max-width: 620px; }
+    .eyebrow {
+      color: #d8a675;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+    h1, h2, h3 { font-family: Georgia, serif; font-weight: normal; }
+    h1 { font-size: clamp(42px, 6vw, 72px); line-height: 1.08; }
+    .hero p { margin: 22px 0 28px; font-size: 18px; }
+    .button {
+      display: inline-block;
+      background: #a96f43;
+      color: white;
+      padding: 13px 23px;
+      border-radius: 30px;
+      margin: 4px 8px 4px 0;
+      transition: .2s;
+    }
+    .button:hover { background: #875331; }
+    .button.outline {
+      background: transparent;
+      border: 1px solid #d8b99a;
+    }
+    section { padding: 65px 8%; }
+    .section-heading { text-align: center; margin-bottom: 32px; }
+    .section-heading h2 { font-size: clamp(30px, 4vw, 43px); }
+    .section-heading p { color: #786d64; margin-top: 8px; }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      background: #fffdf9;
+    }
+    .feature { text-align: center; padding: 10px; }
+    .feature .symbol { font-size: 30px; color: #a96f43; }
+    .feature h3 { font-size: 22px; margin: 8px 0; }
+    .feature p { color: #786d64; font-size: 14px; }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .dish {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px #3825170c;
+    }
+    .dish img { width: 100%; height: 175px; object-fit: cover; display: block; }
+    .dish-info { padding: 15px; }
+    .dish h3 { font-size: 20px; }
+    .price { color: #a96f43; font-weight: bold; margin-top: 5px; }
+    .dish p { font-size: 13px; color: #786d64; margin-top: 5px; }
+    .story {
+      background: #eee4d7;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 45px;
+    }
+    .story img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .story h2 { font-size: 42px; margin-bottom: 15px; }
+    .story p { margin-bottom: 15px; }
+    .contact { text-align: center; background: #fffdf9; }
+    .contact h2 { font-size: 40px; margin-bottom: 15px; }
+    .contact p { margin: 8px; color: #786d64; }
+    footer {
+      background: #211812;
+      color: #d8c9bb;
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+    }
+    @media (max-width: 800px) {
+      .menu-grid { grid-template-columns: repeat(2, 1fr); }
+      .features { grid-template-columns: 1fr; }
+      .story { grid-template-columns: 1fr; }
+      .story img { height: 260px; }
+      header { justify-content: center; }
+      nav { justify-content: center; gap: 14px; }
+      .hero { padding: 65px 7%; }
+    }
+    @media (max-width: 440px) {
+      .menu-grid { grid-template-columns: 1fr; }
+      .dish img { height: 220px; }
+      nav a { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="logo" href="#sakums">ROAST<span>K A F E J N Ī C A</span></a>
+    <nav>
+      <a href="#sakums">Sākums</a>
+      <a href="#par-mums">Par mums</a>
+      <a href="#edienkarte">Ēdienkarte</a>
+      <a href="#kontakti">Kontakti</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="sakums">
+      <div class="hero-content">
+        <p class="eyebrow">Kafija · Ēdiens · Atmosfēra</p>
+        <h1>Vairāk nekā<br>tikai kafija.</h1>
+        <p>Mājīga kafejnīca, kur satiekas lieliska kafija, gardas maltītes un patīkama atmosfēra.</p>
+        <a class="button" href="#edienkarte">Apskatīt ēdienkarti →</a>
+        <a class="button outline" href="#kontakti">Atrast mūs</a>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <div class="symbol">☕</div>
+        <h3>Kvalitatīva kafija</h3>
+        <p>Rūpīgi izvēlētas kafijas pupiņas un lieliska garša.</p>
+      </div>
+      <div class="feature">
+        <div class="symbol">♨</div>
+        <h3>Svaigi gardumi</h3>
+        <p>Kruasāni, brokastis un deserti katrai gaumei.</p>
+      </div>
+      <div class="feature">
+        <div class="symbol">♡</div>
+        <h3>Mājīga atmosfēra</h3>
+        <p>Ideāla vieta sarunām, darbam un atpūtai.</p>
+      </div>
+    </section>
+
+    <section id="edienkarte">
+      <div class="section-heading">
+        <p class="eyebrow">Mūsu piedāvājums</p>
+        <h2>Populārākie gardumi</h2>
+        <p>Nelieli prieki, kas padara dienu labāku.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="dish">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80" alt="Svaigi pagatavota kafija">
+          <div class="dish-info">
+            <h3>Kapučīno</h3>
+            <div class="price">€3,50</div>
+            <p>Kafija ar maigu piena putu kārtu.</p>
+          </div>
+        </article>
+        <article class="dish">
+          <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" alt="Zeltains kruasāns">
+          <div class="dish-info">
+            <h3>Kruasāns</h3>
+            <div class="price">€2,90</div>
+            <p>Svaigi cepts un kraukšķīgs.</p>
+          </div>
+        </article>
+        <article class="dish">
+          <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=700&q=80" alt="Brokastu ēdiens">
+          <div class="dish-info">
+            <h3>Brokastu tosts</h3>
+            <div class="price">€6,50</div>
+            <p>Garda izvēle nesteidzīgam rītam.</p>
+          </div>
+        </article>
+        <article class="dish">
+          <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=700&q=80" alt="Kūka ar ogām">
+          <div class="dish-info">
+            <h3>Siera kūka</h3>
+            <div class="price">€4,50</div>
+            <p>Maigs deserts pie kafijas tases.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="story" id="par-mums">
+      <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=85" alt="Mājīgs kafejnīcas interjers">
+      <div>
+        <p class="eyebrow">Mūsu stāsts</p>
+        <h2>Vieta, kur nesteigties.</h2>
+        <p>ROAST ir izdomātas kafejnīcas demo, kas radīts ar mīlestību pret labu kafiju un gardu ēdienu.</p>
+        <p>Mūsu ideja ir radīt vietu, kur cilvēki var satikties, atpūsties un izbaudīt ikdienas mazos priekus.</p>
+        <a class="button" href="#kontakti">Sazinies ar mums →</a>
+      </div>
+    </section>
+
+    <section class="contact" id="kontakti">
+      <p class="eyebrow">Ciemos pie mums</p>
+      <h2>Gaidīsim tevi!</h2>
+      <p>📍 Rīgas centrs — demo adrese</p>
+      <p>🕒 Pirmdiena–Sestdiena: 8.00–18.00</p>
+      <p>✉ hello@example.com — demo e-pasts</p>
+      <a class="button" href="mailto:hello@example.com">Rakstīt mums</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 ROAST Kafejnīca · Mājaslapas dizaina demo</p>
+    <p>Nosaukums, cenas, adrese un kontakti ir izdomāti piemēram.</p>
+  </footer>
+
+</body>
+</html>
